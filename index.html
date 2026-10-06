@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Foodly — Encontre seu próximo prato</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="#" class="logo">
+
+                <span class="logo-icon">
+                    🍔
+                </span>
+
+                <span>
+                    Foodly
+                </span>
+
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="#inicio">
+                    Início
+                </a>
+
+                <a href="#categorias">
+                    Categorias
+                </a>
+
+                <a href="#restaurantes">
+                    Restaurantes
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <button
+                    class="icon-button"
+                    id="themeButton"
+                    aria-label="Alterar tema"
+                >
+                    🌙
+                </button>
+
+
+                <button
+                    class="favorite-button"
+                    id="favoriteButton"
+                >
+                    ❤️
+                    <span>
+                        Favoritos
+                    </span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main>
+
+
+        <!-- HERO -->
+
+        <section
+            class="hero"
+            id="inicio"
+        >
+
+            <div class="container hero-content">
+
+
+                <div class="hero-text">
+
+                    <span class="hero-badge">
+                        🍴 Descubra novos sabores
+                    </span>
+
+
+                    <h1>
+
+                        Qual vai ser seu
+                        <span>
+                            próximo prato?
+                        </span>
+
+                    </h1>
+
+
+                    <p>
+
+                        Encontre receitas, restaurantes
+                        e sabores incríveis para deixar
+                        seu dia mais gostoso.
+
+                    </p>
+
+
+                    <!-- BUSCA -->
+
+                    <div class="search-container">
+
+                        <div class="search-icon">
+                            🔎
+                        </div>
+
+
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Buscar prato..."
+                        >
+
+
+                        <button
+                            id="searchButton"
+                            class="search-button"
+                        >
+                            Buscar
+                        </button>
+
+                    </div>
+
+
+                    <!-- ESTATÍSTICAS -->
+
+                    <div class="hero-stats">
+
+                        <div>
+
+                            <strong>
+                                500+
+                            </strong>
+
+                            <span>
+                                Pratos
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                50+
+                            </strong>
+
+                            <span>
+                                Categorias
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                4.8
+                            </strong>
+
+                            <span>
+                                ⭐ Avaliação
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HERO VISUAL -->
+
+                <div class="hero-visual">
+
+                    <div class="hero-circle">
+
+                        <span class="hero-emoji">
+                            🍕
+                        </span>
+
+                    </div>
+
+
+                    <div class="floating-card card-one">
+
+                        <span>
+                            ⭐
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                4.9
+                            </strong>
+
+                            <small>
+                                Excelente
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card card-two">
+
+                        <span>
+                            🔥
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Popular
+                            </strong>
+
+                            <small>
+                                Hoje
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CATEGORIAS -->
+
+        <section
+            class="categories-section"
+            id="categorias"
+        >
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            Explore
+                        </span>
+
+                        <h2>
+                            O que você está com vontade?
+                        </h2>
+
+                    </div>
+
+
+                    <button class="see-all">
+                        Ver todas →
+                    </button>
+
+                </div>
+
+
+                <div class="category-grid">
+
+
+                    <button
+                        class="category-card active"
+                        data-category="all"
+                    >
+
+                        <span class="category-icon">
+                            🍽️
+                        </span>
+
+                        <strong>
+                            Todos
+                        </strong>
+
+                        <small>
+                            Ver tudo
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        class="category-card"
+                        data-category="Beef"
+                    >
+
+                        <span class="category-icon">
+                            🥩
+                        </span>
+
+                        <strong>
+                            Carnes
+                        </strong>
+
+                        <small>
+                            Grelhados
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        class="category-card"
+                        data-category="Chicken"
+                    >
+
+                        <span class="category-icon">
+                            🍗
+                        </span>
+
+                        <strong>
+                            Frango
+                        </strong>
+
+                        <small>
+                            Deliciosos
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        class="category-card"
+                        data-category="Pasta"
+                    >
+
+                        <span class="category-icon">
+                            🍝
+                        </span>
+
+                        <strong>
+                            Massas
+                        </strong>
+
+                        <small>
+                            Italianas
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        class="category-card"
+                        data-category="Seafood"
+                    >
+
+                        <span class="category-icon">
+                            🦐
+                        </span>
+
+                        <strong>
+                            Frutos do mar
+                        </strong>
+
+                        <small>
+                            Frescos
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        class="category-card"
+                        data-category="Dessert"
+                    >
+
+                        <span class="category-icon">
+                            🍰
+                        </span>
+
+                        <strong>
+                            Sobremesas
+                        </strong>
+
+                        <small>
+                            Doces
+                        </small>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESTAURANTES / PRATOS -->
+
+        <section
+            class="restaurants-section"
+            id="restaurantes"
+        >
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            Descubra
+                        </span>
+
+                        <h2>
+                            Pratos populares
+                        </h2>
+
+                    </div>
+
+
+                    <div class="sort-container">
+
+                        <label for="sortSelect">
+                            Ordenar:
+                        </label>
+
+
+                        <select id="sortSelect">
+
+                            <option value="popular">
+                                Mais populares
+                            </option>
+
+                            <option value="rating">
+                                Melhor avaliação
+                            </option>
+
+                            <option value="name">
+                                Nome
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FILTROS -->
+
+                <div class="filters">
+
+                    <button
+                        class="filter active"
+                        data-filter="all"
+                    >
+                        Todos
+                    </button>
+
+
+                    <button
+                        class="filter"
+                        data-filter="rating"
+                    >
+                        ⭐ 4.5+
+                    </button>
+
+
+                    <button
+                        class="filter"
+                        data-filter="price"
+                    >
+                        💰 Até R$ 30
+                    </button>
+
+
+                    <button
+                        class="filter"
+                        data-filter="fast"
+                    >
+                        🕐 Até 30 min
+                    </button>
+
+
+                    <button
+                        class="filter"
+                        id="clearFilters"
+                    >
+                        Limpar filtros
+                    </button>
+
+                </div>
+
+
+                <!-- GRID -->
+
+                <div
+                    class="restaurant-grid"
+                    id="restaurantGrid"
+                >
+
+                </div>
+
+
+                <!-- LOADING -->
+
+                <div
+                    class="loading hidden"
+                    id="loading"
+                >
+
+                    <div class="spinner"></div>
+
+                    <p>
+                        Buscando pratos...
+                    </p>
+
+                </div>
+
+
+                <!-- EMPTY -->
+
+                <div
+                    class="empty-state hidden"
+                    id="emptyState"
+                >
+
+                    <span>
+                        🔎
+                    </span>
+
+                    <h3>
+                        Nenhum resultado encontrado
+                    </h3>
+
+                    <p>
+                        Tente buscar por outro termo.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL -->
+
+    <div
+        class="modal hidden"
+        id="restaurantModal"
+    >
+
+        <div class="modal-content">
+
+
+            <button
+                class="modal-close"
+                id="modalClose"
+            >
+                ×
+            </button>
+
+
+            <div
+                class="modal-image"
+                id="modalImage"
+            >
+            </div>
+
+
+            <div class="modal-body">
+
+                <span
+                    class="section-label"
+                    id="modalCategory"
+                >
+                    Prato
+                </span>
+
+
+                <h2 id="modalTitle">
+                    Nome do prato
+                </h2>
+
+
+                <div class="modal-rating">
+
+                    ⭐
+
+                    <span id="modalRating">
+                        4.8
+                    </span>
+
+                </div>
+
+
+                <p id="modalDescription">
+                    Descrição do prato.
+                </p>
+
+
+                <button class="primary-button">
+                    Adicionar ao carrinho →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- CARRINHO -->
+
+<div class="cart-overlay hidden" id="cartOverlay"></div>
+
+<aside class="cart-sidebar" id="cartSidebar">
+
+    <div class="cart-header">
+        <h2>🛒 Seu carrinho</h2>
+
+        <button id="closeCart" class="cart-close">
+            ×
+        </button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+
+        <p class="cart-empty">
+            Seu carrinho está vazio.
+        </p>
+
+    </div>
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="cartTotal">
+                R$ 0,00
+            </strong>
+
+        </div>
+
+        <button
+            class="checkout-button"
+            id="checkoutButton"
+        >
+            Finalizar compra
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- BOTÃO FLUTUANTE DO CARRINHO -->
+
+<button
+    class="floating-cart"
+    id="openCart"
+>
+    🛒
+
+    <span id="cartCount">
+        0
+    </span>
+
+</button>
+
+
+<!-- MENSAGEM DE TESTE -->
+
+<div
+    class="checkout-message hidden"
+    id="checkoutMessage"
+>
+
+    <div class="checkout-message-content">
+
+        <span>
+            ✅
+        </span>
+
+        <h2>
+            Compra realizada!
+        </h2>
+
+        <p>
+            Esta é uma simulação do processo de compra.
+            Nenhum pedido foi realizado e nenhum pagamento
+            foi processado..
+        </p>
+
+        <button id="closeCheckoutMessage">
+            Continuar navegando
+        </button>
+
+    </div>
+
+</div>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+
+            <div>
+
+                <a href="#" class="logo">
+
+                    <span class="logo-icon">
+                        🍔
+                    </span>
+
+                    Foodly
+
+                </a>
+
+
+                <p>
+                    Descubra novos sabores todos os dias.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#">
+                    Sobre
+                </a>
+
+                <a href="#">
+                    Contato
+                </a>
+
+                <a href="#">
+                    Privacidade
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
